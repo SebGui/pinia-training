@@ -1,6 +1,8 @@
+// Import global CSS
 import './assets/main.css'
 
-import {createPinia} from 'pinia'
+// import createPinia method Pinia
+import { createPinia } from 'pinia'
 
 import { createApp } from 'vue'
 import App from './App.vue'

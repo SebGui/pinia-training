@@ -2,15 +2,26 @@
     <div class="task">
         <h3>{{ task.title }}</h3>
         <div class="icons">
-            <i class="material-icons deleteRed" @click="taskStore.deleteTask(task.id)">delete</i>
-            <i class="material-icons" :class="{favRed:task.isFav}" @click="taskStore.toggleFav(task.id)">favorite</i>
+            <i 
+                class="material-icons deleteRed" 
+                @click="taskStore.deleteTask(task.id)">
+                    delete
+            </i>
+            <i 
+                class="material-icons" 
+                :class="{favRed:task.isFav}" 
+                @click="taskStore.toggleFav(task.id)">
+                    favorite
+            </i>
         </div>
     </div>
 </template>
 
 <script setup>
+    // Pinia taskStore
     import { useTaskStore } from '../stores/TaskStore';
 
+    // Instanciate taskStore
     const taskStore = useTaskStore();
 
     /* Define props */
